@@ -1,6 +1,5 @@
-import 'package:allinone/route_manager.dart';
+import 'route_manager.dart';
 import 'package:flutter/material.dart';
-import 'Loading/LoadingPage.dart';
 
 void main() {
   runApp(const MyApp());

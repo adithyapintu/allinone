@@ -13,10 +13,15 @@ class _LoadingPageState extends State<LoadingPage> {
 
   void checkLogged(){
     if(true){
-      Navigator.pushReplacementNamed(context, "/HomePage");
+      WidgetsBinding.instance?.addPostFrameCallback((_) {
+        Navigator.pushReplacementNamed(context, "/HomePage");
+      });
     }
     else{
-      Navigator.pushReplacementNamed(context, "/LoginPage");
+      WidgetsBinding.instance?.addPostFrameCallback((_) {
+        Navigator.pushReplacementNamed(context, "/LoginPage");
+      });
+
     }
   }
 
@@ -30,7 +35,10 @@ class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Loading"),
+      color: Colors.green,
+      child: const Center(
+          child: Text("Loading")
+      ),
     );
   }
 }

@@ -7,7 +7,8 @@ class RouteGenerator{
   static Route<dynamic> getRoute(RouteSettings routeSettings){
     switch(routeSettings.name){
       case "/loading":
-        return MaterialPageRoute(builder: (_) =>  const LoadingPage());
+        return
+          MaterialPageRoute(builder: (_) =>  const LoadingPage());
       case "/HomePage":
         return MaterialPageRoute(builder: (_) =>  HomePage());
       case "/LoginPage":
