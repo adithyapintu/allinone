@@ -1,3 +1,4 @@
+import 'package:allinone/route_manager.dart';
 import 'package:flutter/material.dart';
 import 'Loading/LoadingPage.dart';
 
@@ -10,9 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoadingPage(),
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute: "/loading",
     );
   }
 }

@@ -10,17 +10,16 @@ class LoadingPage extends StatefulWidget {
 }
 
 class _LoadingPageState extends State<LoadingPage> {
-  late Widget isLogged;
 
   void checkLogged(){
-    bool logged = true;
-    if(logged){
-      isLogged = const HomePage();
+    if(true){
+      Navigator.pushReplacementNamed(context, "/HomePage");
     }
     else{
-      isLogged = const LoginPage();
+      Navigator.pushReplacementNamed(context, "/LoginPage");
     }
   }
+
 
   @override
   void initState(){
@@ -30,6 +29,8 @@ class _LoadingPageState extends State<LoadingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return isLogged;
+    return Container(
+      child: Text("Loading"),
+    );
   }
 }
