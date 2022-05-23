@@ -14,12 +14,12 @@ class _LoadingPageState extends State<LoadingPage> {
   void checkLogged(){
     if(true){
       WidgetsBinding.instance?.addPostFrameCallback((_) {
-        Navigator.pushReplacementNamed(context, "/HomePage");
+        Navigator.popAndPushNamed(context, "/HomePage");
       });
     }
     else{
       WidgetsBinding.instance?.addPostFrameCallback((_) {
-        Navigator.pushReplacementNamed(context, "/LoginPage");
+        Navigator.popAndPushNamed(context, "/LoginPage");
       });
 
     }
