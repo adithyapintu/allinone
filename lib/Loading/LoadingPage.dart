@@ -1,5 +1,3 @@
-import 'package:allinone/Home/HomePage.dart';
-import 'package:allinone/Login/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 class LoadingPage extends StatefulWidget {

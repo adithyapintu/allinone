@@ -1,7 +1,8 @@
-import 'package:allinone/Home/HomePage.dart';
-import 'package:allinone/Loading/LoadingPage.dart';
-import 'package:allinone/Login/LoginPage.dart';
+import 'Home/HomePage.dart';
+import 'Loading/LoadingPage.dart';
+import 'Login/LoginPage.dart';
 import 'package:flutter/material.dart';
+import 'Profile/Profile.dart';
 
 class RouteGenerator{
   static Route<dynamic> getRoute(RouteSettings routeSettings){
@@ -9,11 +10,13 @@ class RouteGenerator{
       case "/loading":
         return MaterialPageRoute(builder: (_) =>  const LoadingPage());
       case "/HomePage":
-        return MaterialPageRoute(builder: (_) =>  HomePage());
+        return MaterialPageRoute(builder: (_) =>  const HomePage());
       case "/LoginPage":
         return MaterialPageRoute(builder: (_) =>  const LoginPage());
+      case "/Profile":
+        return MaterialPageRoute(builder: (_) =>  const Profile());
       default :
-        return MaterialPageRoute(builder: (_) =>  HomePage());
+        return MaterialPageRoute(builder: (_) => const HomePage());
     }
   }
 }
